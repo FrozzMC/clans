@@ -1,0 +1,454 @@
+#These are the different messages displayed when using the command /clan
+#All messages use JSON formatting to send it to player
+# You can use the following special characters to create a unique interactable message
+# <p> is to split msg into seperate parts
+# <t> is to add tooltip
+# <n> is for new line (only for tooltip)
+# <cs> is to suggest cmd on click
+# <cc> is to execute cmd on click
+# <st> to send it as title (only at the end)
+# <sst> to send it as a subtitle(only works if there is a title being displayed)
+# <sh> to send it above hotbar (only at end)
+# for example 
+# this is a simple msg <p>this is a new part<t>this msg will<n>have this tooltip<t><cs>/this cmd is suggested<cs> 
+help:
+   incorrect:
+      - '%prefix%&fIncorrect command. Type<p> &a/ clan help &ffor more help<t>&7Click for more help<t><cc>/clan help<cc>'
+   detailed:
+      - '&b&l&n            &b&lClans &f&lHelp&b&l&n            '
+      - ' '
+      - '&7* &b/clan create [name] &7/ &fCreate a clan<t>&fCreate a new clan.<n>&fCommand:<n>&f/clan create [name]<n>&f/clan new [name]<n> <n>&7Click for example<t><cs>/clan create &bEpic&fClan<cs>'
+      - '&7* &b/clan invite [name] &7/ &fInvite a Player<t>&fInvite players to your clan.<n>&fCommand:<n>&f/clan invite [name]<n>&f/clan i [name]<n> <n>&7Click for example<t><cs>/clan invite backstabber<cs>'
+      - '&7* &b/clan accept <p>&7/ &fAccept requests<t>&fAccept clan related requests.<n>&fCommand:<n>&f/clan accept<n>&f/clan yes<n> <n>&7Click for example<t><cs>/clan accept<cs>'
+      - '&7* &b/clan leave <p>&7/ &fLeave clan<t>&fLeave your current clan.<n>&fCommand:<n>&f/clan leave<n>&f/clan abandon<n> <n>&7Click for example<t><cs>/clan leave<cs>'
+      - '&7* &b/clan kick [name] &7/ &fKick a Player<t>&fKick someone from the clan.<n>&fCommand:<n>&f/clan kick [name]<n>&f/clan dump [name]<n> <n>&7Click for example<t><cs>/clan kick backstabber<cs>'
+      - '&7* &b/clan makeleader [name] &7/ &fMake Leader<t>&fMake someone else the leader..<n>&fCommand:<n>&f/clan makeleader [name]<n>&f/clan ml [name]<n> <n>&7Click for example<t><cs>/clan makeleader backstabber<cs>'
+      - '&7* &b/clan chat [message/on/off] &7/ &fChat with clan<t>&fChat privately with clan.<n>&fCommand:<n>&f/clan chat [msg/on/off]<n>&f/clan c [msg/on/off]<n> <n>&7Click for example<t><cs>/clan chat hey!!<cs>'
+      - '&7* &b/clan chat ally [message] &7/ &fChat with allies<t>&fChat privately with allies.<n>&fCommand:<n>&f/clan chat ally [msg/on/off]<n>&f/clan c a [msg/on/off]<n> <n>&7Click for example<t><cs>/clan chat ally hey!!<cs>'
+      - '&7* &b/clan chat truce [message] &7/ &fChat with Truces<t>&fChat privately with allies & truces.<n>&fCommand:<n>&f/clan chat truce [msg/on/off]<n>&f/clan c t [msg/on/off]<n> <n>&7Click for example<t><cs>/clan chat truce hey!!<cs>'
+      - '&7* &b/clan tag [member] [tag] &7/ &fTag a Member<t>&fGive clan member unique titles.<n>&fCommand:<n>&f/clan tag [member] [tag]<n>&f/clan role [member] [tag]<n> <n>&7Click for example<t><cs>&r/clan role backstabber &6&lCreator<cs>'
+      - '&7* &b/clan settag [tag] &7/ &fTag your clan<t>&fGive clan a unique tag.<n>&fCommand:<n>&f/clan settag [tag]<n> <n>&7Click for example<t><cs>&r/clan settag &6&lSvG<cs>'
+      - '&7* &b/clan ally [clan-name] &7/ &fAlly a clan<t>&fAlly with other clans.<n>&fCommand:<n>&f/clan ally [clan-name]<n> <n>&7Click for example<t><cs>&r/clan ally &cKillers<cs>'
+      - '&7* &b/clan truce [clan-name] &7/ &fTruce a clan<t>&fTruce with other clans.<n>&fCommand:<n>&f/clan truce [clan-name]<n> <n>&7Click for example<t><cs>&r/clan truce &cKillers<cs>'
+      - '&7* &b/clan remove [clan-name] &7/ &fRemove a ally<t>&fRemove truces & allies.<n>&fCommand:<n>&f/clan remove [clan-name]<n>&f/clan betray [clan-name]<n> <n>&7Click for example<t><cs>&r/clan betray &cKillers<cs>'
+      - '&7* &b/clan comment [comment] &7/ &fComment yourself<t>&fGive yourself a unique tagline.<n>&fCommand:<n>&f/clan comment [comment]<n> <n>&7Click for example<t><cs>&r/clan comment &cGet &lRekt &r&cNoobs<cs>'
+      - '&7* &b/clan manage <p>&7/ &fManage the clan<t>&fManage your clan.<n>&fCommand:<n>&f/clan manage<n> <n>&7Click for example<t><cs>&r/clan manage<cs>'
+      - '&7* &b/clan rename [name] &7/ &fRename the clan<t>&fRename your clan.<n>&fCommand:<n>&f/clan rename [name]<n> <n>&7Click for example<t><cs>&r/clan rename &ckiller<cs>'
+      - '&7* &b/clan vault [number] &7/ &fOpen clan vault<t>&fAccess the clan vaults.<n>&fCommand:<n>&f/clan vault [number]<n> <n>&7Click for example<t><cs>&r/clan vault 1<cs>'
+      - '&7* &b/clan setbase [name] &7/ &fSet clan base<t>&fSet the clan base.<n>&fCommand:<n>&f/clan setbase [name]<n> <n>&7Click for example<t><cs>&r/clan setbase home<cs>'
+      - '&7* &b/clan delbase [name] &7/ &fDelete clan base<t>&fDelete the clan base.<n>&fCommand:<n>&f/clan delbase [name]<n> <n>&7Click for example<t><cs>&r/clan delbase home<cs>'
+      - '&7* &b/clan base [name] &7/ &fGoto clan base<t>&fTeleport to clan or ally bases.<n>&fCommand:<n>&f/clan base [name]<n> <n>&7Click for example<t><cs>&r/clan base home<cs>'
+      - '&7* &b/clan bank <p>&7/ &fClan balance<t>&fSee how much money is in clan bank.<n>&fCommand:<n>&f/clan bank<n> <n>&7Click for example<t><cs>&r/clan bank<cs>'
+      - '&7* &b/clan deposit [amount] &7/ &fDeposit to bank<t>&fDeposit money to clan bank.<n>&fCommand:<n>&f/clan deposit [amount]<n> <n>&7Click for example<t><cs>&r/clan deposit 100<cs>'
+      - '&7* &b/clan withdraw [amount] &7/ &fWithdraw from bank<t>&fWithdraw money from clan bank.<n>&fCommand:<n>&f/clan withdraw [amount]<n> <n>&7Click for example<t><cs>&r/clan withdraw 100<cs>'
+      - '&7* &b/clan respect <p>&7/ &fView clan respect<t>&fView how much respect your clan has.<n>&fCommand:<n>&f/clan respect<n> <n>&7Click for example<t><cs>&r/clan respect<cs>'
+      - '&7* &b/clan points &7/ &fView clan points<t>&fView how much points you have.<n>&fCommand:<n>&f/clan points <n> <n>&7Click for example<t><cs>&r/clan points<cs>'
+      - '&b&l&n                                     '
+      - ' '
+create:
+   inclan:
+      - '%prefix%&fYou are already in clan %clan%&f. '
+      - 'Please leave your current clan to make new clan.'
+   nametaken:
+      - '%prefix%&fThe name %clan%&f is already taken. Please try another name.'
+   bigname:
+      - '%prefix%&fThe name %clan%&f is too big.'
+   sucess:
+      - '%prefix%&fSucessfull created clan %clan%&f.'
+   info:
+      - '%prefix%&fCreate a new clan. Usage /clan create <name>'
+   noname:
+      - "%prefix%&fYou can't name your clan nothing."
+   timer:
+      - "%prefix%&fYou can create a clan once in %timer%."
+   broadcast:
+      - '&f%player%&7 has created new clan &r%clan%.'
+invite:
+   notclan:
+      - '%prefix%&fYou must be in a clan to invite.'
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to invite players.'
+   inclan:
+      - '%prefix%&fThe player %inviteplayer% is already in a clan.'
+   maxedout:
+      - '%prefix%&fMember limit reached. Please Upgrade clan size.'
+   noplayer:
+      - '%prefix%&fCant find player named %inviteplayer%.'
+   onjoin:
+      - '%prefix%&f%inviteplayer% is now part of %clan%.'
+   sent:
+      - '%prefix%&fRequest sent to %inviteplayer%.'
+   info:
+      - '%prefix%&fInvite others to your clan . Usage /clan invite <name>'
+   onrecieve:
+      - '%prefix%&fYou have recieved invitation from &6%player%.'
+      - '&fType &6/ clan accept&f within 20 sec to accept.<t>&7Click to accept.<t><cc>/clan accept<cc>'
+   ontimeout:
+      - '%prefix%&fThe request has timed out.'
+accept:
+   onaccept:
+      - '%prefix%&fAccepted clan request. You are now part of %clan%'
+   norequest:
+      - '%prefix%&fYou dont have any requests to accept.'
+leave:
+   isleader:
+      - '%prefix%&fYou are the leader if u leave the clan will be disbaned.'
+      - '&f Type &6/ clan leave&f again to confirm.<t>&7Click to leave.<t><cc>/clan leave<cc>'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   pre:
+      - '%prefix%&fAre you sure you want to leave. '
+      - '&f Type &6/ clan leave&f again to confirm.<t>&7Click to leave.<t><cc>/clan leave<cc>'
+   success:
+      - '%prefix%&fYou have left the clan.'
+   others:
+      - '%prefix%&f%player% left the clan.'
+kick:
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to kick players.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   self:
+      - '%prefix%&fYou cant kick yourself.'
+   isleader:
+      - '%prefix%&fYou cannot kick the clan leader.' 
+   noplayer:
+      - '%prefix%&fThe player %kickplayer% is not in your clan.' 
+   toclan:
+      - '%prefix%&f%player% has kicked &c%kickplayer%&f from the clan.'
+   success:
+      - '%prefix%&fYou have kicked %kickplayer% from the clan.'
+   toplayer:
+      - '%prefix%&fYou have been kicked from the clan %clan%.'
+   info:
+      - '%prefix%&fKick others from your clan . Usage /clan kick <name>'
+makeleader:
+   notleader:
+      - '%prefix%&fYou must be the leader to do this.'
+   noclan:
+      - '%prefix%&fYou are not in a clan'
+   noplayer:
+      - '%prefix%&fThe player %otherplayer% is not in your clan.' 
+   sent:
+      - '%prefix%&fMade %otherplayer% the leader of %clan%'
+   alreadyleader:
+      - '%prefix%&fYou are already the leader of %clan%.'
+   toplayer: 
+      -'%prefix%&fYou are now the leader of %clan%.'
+   info:
+      - '%prefix%&fMake someone else the leader. Usage /clan makeleader <name>'
+chat:
+   noclan:
+      - '%prefix%&fYou are not in a clan'
+   onenable:
+      - '%prefix%&fClan only chat enabled.'
+   ondisable:
+      - '%prefix%&fClan chat disabled.' 
+   onenableally:
+      - '%prefix%&fClan & Ally chat enabled.'
+   onenabletruce:
+      - '%prefix%&fClan, Ally & Truce chat enabled.'
+   info:
+      - '%prefix%&fPrivate chat for clan & allies. Usage /clan chat <on|off|ally|truce|message>'
+tag:
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to tag players.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   toobig:
+      - '%prefix%&fThe tag %tag%&f is too big.'
+   noplayer:
+      - '%prefix%&fThe player %otherplayer% is not in your clan.' 
+   success:
+      - '%prefix%&fYou have tagged %otherplayer% as %tag%.'
+   toplayer:
+      - '%prefix%&fYou are now %tag%&f in the clan.'
+   info:
+      - '%prefix%&fGive member a custom tag. Usage /clan tag <name> <tag>'
+ally:
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to manage allies.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   notclan:
+      - '%prefix%&f%otherclan% is not a clan.'
+   sent:
+      - '%prefix%&fSent ally request to %otherclan%.'
+   already:
+      - '%prefix%&fYour are already allied to %otherclan%.'
+   limit:
+      - '%prefix%&fThe clan %otherclan%&f cannot have any more allies.'
+   limitself:
+      - '%prefix%&fYour clan cannot have any more allies.'
+   toclan:
+      - '%prefix%&f%clan%&f has requested to become allies with your clan.'
+      - '&fType &6/ clan accept&f to accept their request.<t>&7Click to accept.<t><cc>/clan accept<cc>'
+   sucess:
+      - '%prefix%&fRequest accepted.%clan%&f & %otherclan%&f are now allies.'
+   timed:
+      - '%prefix%&fRequest timed out.'
+   info:
+      - '%prefix%&fAlly to other clans. Usage /clan ally <list|clan>'
+   list:
+      - '%prefix%&fYour clan is allied to:'
+truce:
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to manage truces.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   notclan:
+      - '%prefix%&f%otherclan% is not a clan.'
+   sent:
+      - '%prefix%&fSent truce request to %otherclan%.'
+   already:
+      - '%prefix%&fYour are already truced to %otherclan%.'
+   limit:
+      - '%prefix%&fThe clan %otherclan%&f cannot have any more truces.'
+   limitself:
+      - '%prefix%&fYour clan cannot have any more truces.'
+   toclan:
+      - '%prefix%&f%clan%&f has requested to become truces with your clan.'
+      - '&fType &6/ clan accept&f to accept their request.<t>&7Click to accept.<t><cc>/clan accept<cc>'
+   sucess:
+      - '%prefix%&fRequest accepted.%clan%&f & %otherclan%&f are now truced.'
+   timed:
+      - '%prefix%&fRequest timed out.'
+   info:
+      - '%prefix%&fTruce other clans. Usage /clan truce <list|clan>'
+   list:
+      - '%prefix%&fYour clan is truced to:'
+comment:
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   toobig:
+      - '%prefix%&fThat comment is too big.'
+   success:
+      - '%prefix%&fAdded the comment to your profile.'
+   info:
+      - '%prefix%&fGive yourself unique comment. Usage /clan comment <comment>'
+remove:
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to remove truces & allies.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   notclan:
+      - '%prefix%&fYou are not Truced or Allied to %otherclan%'
+   sucess:
+      - '%prefix%&fYou are nolonger Allied or Truced to %otherclan%'
+   toother:
+      - '%prefix%&f%clan%&f & %otherclan%&f are nolonger allied.'
+   info:
+      - '%prefix%&fRemove a clan from truce/ally. Usage /clan remove <clan>'
+manage:
+   notleader:
+      - '%prefix%&fYou must be the leader to manage clan.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+rename:
+   notleader:
+      - '%prefix%&fYou must be the leader to rename clan.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   nametaken:
+      - '%prefix%&fThe name %newname%&f is already taken. Please try another name.'
+   noname:
+      - '%prefix%&fYou cant name your clan nothing.'
+   bigname:
+      - '%prefix%&fThe name %newname%&f is too big.'
+   timer:
+      - '%prefix%&fYou can rename the clan once in 14 days.'
+      - '&fTime left: %time%'
+   sucess:
+      - '%prefix%&fSucessfull renamed clan to %newname%&f.'
+   info:
+      - '%prefix%&fRename your clan. Usage /clan rename <name>'
+vault:
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to access vaults.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   locked:
+      - '%prefix%&fYour clan hasnt unlocked that vault yet.'
+   info:
+      - '%prefix%&fAccess clan Vaults. Usage /clan vault <number>'
+setbase:
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to make base.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   nomore:
+      - '%prefix%&fYour clan cant have anymore bases.'
+   alreadyset:
+      - '%prefix%&fA base by the name %base% is already set.'
+   sucess:
+      - '%prefix%&fSucessfully made a clan base named %base%.' 
+   info:
+      - '%prefix%&fMake base for your clan. Usage /clan setbase <name>'
+delbase:
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to delete base.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   notset:
+      - '%prefix%&fA base by the name %base% is not set.'
+   sucess:
+      - '%prefix%&fSucessfully removed the clan base named %base%.' 
+   info:
+      - '%prefix%&fRemove clan bases. Usage /clan delbase <name>'
+base:
+   clanbase:
+      - '%prefix%&fThe clan %clan%&f has the following bases:'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   notclan:
+      - '%prefix%&fThe clan %clan%&f is not your clan or your allies.'
+   sucess:
+      - "%prefix%&fSucessfully teleported to %clan%&f's base named %base%." 
+   nobase:   
+      - '%prefix%&fThe clan %clan%&f does not have a base named %base%.'
+   info:
+      - '%prefix%&fTeleport to clan and allies bases. Usage /clan base <basename>'
+stats:
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   sucess:
+      - '%prefix%&fShowing stats for %clan%.'
+   notclan:
+      - '%prefix%&fCouldnt find %clan% in the database.'
+duel:
+   confirmation:
+      - '%prefix%&fTo confirm the duel request, please type /clan duel <clan> confirm.'
+      - '%prefix%&fTo deny the duel request, specify 'cancel' on the latest argument of the command.'
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to manage duels.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   notclan:
+      - '%prefix%&f%otherclan%&f is not a clan'
+   allied:
+      - '%prefix%&fThe clan %otherclan%&f is your ally.'
+   busy:
+      - '%prefix%&fThe Arena is Currently Occupied.'
+   dueling:
+      - '%prefix%&fThe Clan is already in a duel.'
+   fail:
+      - '%prefix%&fFailed to send duel request.'
+   nomore:
+      - '%prefix%&fYou cant start anymore duels today.'
+   sent:
+      - '%prefix%&fYour Duel Request has been sent to %otherclan%.'
+   reject:
+      - '%prefix%&fThe Duel Request Expired.'
+   accepted:
+      - '%prefix%&fThe clan %clan%&f & %otherclan%&f are dueling.'
+      - '&fDo &6/ clan accept&f to join the fight.<t>&7Click to join.<t><cc>/clan accept<cc>'
+   info:
+      - '%prefix%&fDuel with other clans. Usage /clan duel [clanname]'
+shop:
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   sucess:
+      - '%prefix%&fUpgrade bought sucessfully.'
+   fail:
+      - '%prefix%&fSorry you dont have enough &c%cost%&f to perform upgrade'
+deposit:
+   info:
+      - '%prefix%&fDeposit money into the clan bank. Usage /clan deposit <amount>'
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to access bank.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   correctamount:
+      - '%prefix%&fPlease enter correct amount to deposit.'
+   nobal:
+      - '%prefix%&fYou dont have enough balance.'
+   sucess:
+      - '%prefix%&fSucessfully added %amount% $ to the clan bank.'
+withdraw:
+   info:
+      - '%prefix%&fWithdraw money from the clan bank. Usage /clan withdraw <amount>'
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to access bank.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   correctamount:
+      - '%prefix%&fPlease enter correct amount to withdraw.'
+   nobal:
+      - '%prefix%&fYour clan doesnt have enough balance.'
+   limit:
+      - '%prefix%&fYou cant withdraw %amount% at a time.'
+   sucess:
+      - '%prefix%&fSucessfully withdrawn %amount% $ from the clan bank.'
+bank:
+   notleader:
+      - '%prefix%&fYou must be the leader or have permission to access bank.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   sucess:
+      - '%prefix%&fYour clan has %amount% $ in bank.'
+respect:
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   message:
+      - " "
+      - "&f&l&n              &b&lRespect&f&l&n              "
+      - " "
+      - "&4Respect &fis the count of how much"
+      - "&fyour clan is recognised on the server."
+      - " "
+      - "&fYour clan can gain respect by:"
+      - "&f- &aKilling players in PvP."
+      - "&f- &aWinning clan duels."
+      - "&f- &aStocking riches in clan bank."
+      - " "
+      - "&fYour clan can lose respect by:"
+      - "&f- &cDying."
+      - "&f- &cKill Farming."
+      - "&f- &cLoosing clan duels."
+      - "&f- &cSpending riches from clan bank."
+      - " "
+      - "&fYour clan currently has &4%respect%&f respect."
+      - "&f&l&n                                     "
+      - " "
+point:
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   message:
+      - " "
+      - "&f&l&n              &6&lPoints&f&l&n              "
+      - " "
+      - "&6Points &fis the Currency used"
+      - "&ffor upgrades in /clan shop"
+      - " "
+      - "&fYou can gain points by:"
+      - "&f- &aKilling players in PvP."
+      - "&f- &aWinning clan duels."
+      - " "
+      - "&fYou currently have &6%point%&f points."
+      - "&f&l&n                                     "
+      - " "
+settag:
+   notleader:
+      - '%prefix%&fYou must be the leader to cheange clan tag.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   toobig:
+      - '%prefix%&fThe tag %tag%&f is too big.'
+   success:
+      - '%prefix%&fYour clan is now tagged as %tag%&f.'
+   info:
+      - '%prefix%&fChange the tag of your clan. Usage /clan settag <tag>'
+
+delete:
+   notleader:
+      - '%prefix%&fOnly the leader can delete the clan.'
+   noclan:
+      - '%prefix%&fYou are not in a clan.'
+   pre:
+      - '%prefix%&fAre you sure you want to delete the clan. '
+      - '&f Type &6/ clan delete&f again to confirm.<t>&7Click to leave.<t><cc>/clan leave<cc>'
+   success:
+      - '%prefix%&fYou have deleted the clan.'
+   others:
+      - '%prefix%&f%player% deleted the clan.'
+   

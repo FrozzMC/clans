@@ -1,0 +1,33 @@
+maingui:
+   name: '&1&o&nTop Clans'
+   size: 3
+   background:
+      type: 'BLACK_STAINED_GLASS_PANE'
+      name: '&bClan Stats'
+      lore:
+         - ' '
+   data:
+      slot: 4
+      type: 'DIAMOND_SWORD'
+      name: '&b&lClan &f&lTop'
+      lore:
+         - '&fThese are the great lords'
+         - '&fof war on the server.'
+         - '&fFear them and hope they'
+         - '&fdont find you in PvP.'
+   clandata:
+      type: '<skull>%leader%'
+      name: '&fNo %pos% : %clan%'
+      lore:
+         - '&aLeader &f: %leader%'
+         - '&ePoints &f: &6%totalpoints%'
+         - '&cDuels fought &f: %duels%'
+         - '&cDuels won &f: &a%duelswon%'
+         - '&1Respect &f: &9%respect%'
+         - ' '
+         - '&eTotal members &f: &r%membercount%'
+         - '&7-&a%members%'
+         - ' '
+         - '&7Click for more information'
+         
+      

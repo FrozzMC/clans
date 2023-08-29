@@ -1,0 +1,50 @@
+settings:   #basic settings for the clans
+   clan-create-timer: 600   #time in sec player has to wait btw creating a new clan (cant use string)
+   clan-rename-timer: '60*60*24*14'   #time in sec a clan has to wait untill it can rename their clan
+   clan-backup-interval: '60*60'   #time in sec all clans are backed up
+   clan-top-update-interval: '60*1'   #time in sec for top clan stats to be updated
+   clan-bank-max-withdraw: 1000000   #max amount of money that can be withdrawn at a time
+   max-clan-name: 25   #max legth of a clan name
+   max-clan-tag: 5   #max length of a clan tag
+   max-tag: 10   #max length of a player tag
+   max-info: 50   #max length of a clan comment
+   prefix: '&b&lEpic&f&lClans &7&l>>'   #prefix used before all messages
+formats:   #formats for clan chats (u can use placeholders from placeholderAPI)
+   clan-chat-format: '&7[&aC&7] &f%clan% &f%tag% &f%player% &7&l> &f%msg%'
+   ally-chat-format: '&7[&eA&7] &f%clan% &f%tag% &f%player% &7&l> &f%msg%'
+   truce-chat-format: '&7[&cT&7] &f%clan% &f%tag% &f%player% &7&l> &f%msg%'
+   spy-chat-format: '&7[&6Spy&7] &f%clan% &f%tag% &f%player% &7&l> &f%msg%'
+   clan-chat-char: '!' #if msg starts with this msg is sent to clan chat
+creation-costs:
+   enabled: true   #true if you want costs for making a clan
+   message-on-fail: #message displayed when player doesnt have enough costs
+      - '%prefix%&fYou dont have enough &c%cost%&f to create a clan.'
+      - '&fYou need:'
+      - '&7Balance : &e%balance%'
+      - '&7Experience : &e%experience%'
+      - '&7Kills : &e%kills%'
+   groups: #different groups incase you want to have ranks with different requirements
+      default:   #dont delete this group
+         permission: 'null'
+         balance: 5000000
+         experience: 5000
+         kills: 200
+      '1': #best group must be 1 second best 2 & so on
+         permission: 'epicsetclans.rank1'
+         balance: 100000
+         experience: 100
+         kills: 50
+      '2':
+         permission: 'epicsetclans.rank2'
+         balance: 1000000
+         experience: 1000
+         kills: 100
+mysql:
+   enabled: false
+   server:
+      host: "localhost"
+      port: "3306"
+      database: "clanstests"
+      username: "test"
+      password: "test"
+      

@@ -1,0 +1,189 @@
+maingui:
+   size: 3
+   name: '&lClan Management'
+   background:
+      type: 'BLACK_STAINED_GLASS_PANE'
+      name: '&bClan Manager'
+      lore:
+         - '&7Manage different permissions'
+         - '&7of your clan members'
+   clandata:
+      type: '<glow>SUNFLOWER'
+      slot: 4
+      name: '&b&lClan &f&lInformation'
+      lore:
+         - '&aClan name &f: &r%clan%'
+         - '&aClan leader &f: %leader%'
+         - '&aClan respect &f: &e%respect%'
+         - '&aClan points &f: &e%totalpoints%'
+         - '&cDuels fought &f: %duels%'
+         - '&cDuels won &f: &a%duelswon%'
+         - ' '
+         - '&eTotal members &f: &r%membercount%'
+   playerdata:
+      type: '<skull>%player%'
+      name: "%player%'s data"
+      lore:
+         - '&aKills &f: %kills%'
+         - '&aDeaths &f: %deaths%'
+         - '&aPoints &f: &e%points%'
+         - '&cDuels fought &f: %duels%'
+         - '&cDuels won &f: &a%duelswon%'
+         - ' '
+         - '&eTag &f: %tag%'
+         - '&eComment &f: %comment%'
+         - ' '
+         - '&a&lPermissions:'
+         - '&bInvite &7: %invite%'
+         - '&bKick &7: %kick%'
+         - '&bTag &7: %taging%'
+         - '&bAlly &7: %allying%'
+         - '&bTruce &7: %trucing%'
+         - '&bRemove &7: %remove%'
+         - '&bDuel &7: %duel%'
+         - '&bSetBase &7: %setbase%'
+         - '&bDelBase &7: %delbase%'
+         - '&bVaults &7: %vault%'
+subgui:
+   size: 2
+   name: "%player%'s Permissions"
+   background:
+      type: 'BLACK_STAINED_GLASS_PANE'
+      name: "&b%player%'s &fPermissions"
+      lore:
+         - '&7Click to change any of'
+         - "&7%player%'s permissions"
+   items:
+      '0':
+         item: 'PAPER'
+         name: '&bInvite'
+         lore:
+            - '&7-Allow member to invite'
+            - '&7-others to the clan'
+            - ' '
+            - '&bStatus &f: %invite%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'invite'
+      '1':
+         item: 'COAL'
+         name: '&bKick'
+         lore:
+            - '&7-Allow member to kick'
+            - '&7-people from the clan'
+            - ' '
+            - '&bStatus &f: %kick%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'kick'
+      '2':
+         item: 'NAME_TAG'
+         name: '&bTag'
+         lore:
+            - '&7-Allow member to give'
+            - '&7-tag to other members'
+            - ' '
+            - '&bStatus &f: %taging%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'tag'
+      '3':
+         item: 'DIAMOND_AXE'
+         name: '&bAlly'
+         lore:
+            - '&7-Allow member to make'
+            - '&7-allies with other clans.'
+            - ' '
+            - '&bStatus &f: %allying%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'ally'
+      '17':
+         item: 'IRON_AXE'
+         name: '&bTruce'
+         lore:
+            - '&7-Allow member to make'
+            - '&7-truces with other clans.'
+            - ' '
+            - '&bStatus &f: %trucing%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'truce'
+      '5':
+         item: 'BARRIER'
+         name: '&bRemove'
+         lore:
+            - '&7-Allow member to remove'
+            - '&7-truces & Allies.'
+            - ' '
+            - '&bStatus &f: %remove%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'remove'
+      '6':
+         item: 'IRON_SWORD'
+         name: '&bDuel'
+         lore:
+            - '&7-Allow member to start'
+            - '&7-& accept duels.'
+            - ' '
+            - '&bStatus &f: %duel%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'duel'
+      '7':
+         item: 'GRASS_BLOCK'
+         name: '&bSetbase'
+         lore:
+            - '&7-Allow member to set'
+            - '&7-the clan bases.'
+            - ' '
+            - '&bStatus &f: %setbase%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'setbase'
+      '8':
+         item: 'DIRT'
+         name: '&bDelbase'
+         lore:
+            - '&7-Allow member to delete'
+            - '&7-the clan bases.'
+            - ' '
+            - '&bStatus &f: %delbase%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'delbase'
+      '4':
+         item: '<glow>paper'
+         name: '&bBank'
+         lore:
+            - '&7-Allow member to access'
+            - '&7-the clan bank.'
+            - ' '
+            - '&bStatus &f: %banking%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'bank'
+      '9':
+         item: 'CHEST'
+         name: '&bVault'
+         lore:
+            - '&7-Allow member to access'
+            - '&7-the clan vaults.'
+            - ' '
+            - '&bStatus &f: %vault%'
+            - ' '
+            - '&7Click to change' 
+         perm: 'vault'
+      '13':
+         item: 'GOLDEN_HELMET'
+         name: '&cMake Leader'
+         lore:
+            - '&7Make this member the leader'
+            - '&7of the clan. You will become'
+            - '&7a member if you do this.'
+            - ' '
+            - '&7Click to change'
+         perm: 'leader'
+      
+   

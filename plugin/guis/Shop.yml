@@ -1,0 +1,203 @@
+maingui:
+   name: '&lClan Upgrades'
+   size: 6
+   background:
+      type: 'BLACK_STAINED_GLASS_PANE'
+      name: '&bClan Updrade Shop'
+      lore:
+         - '&7Buy diferent upgrades'
+         - '&7for your clan.'
+   clandata:
+      item: 'SUNFLOWER'
+      slot: 4
+      name: '&b&lClan &f&lInformation'
+      lore:
+         - '&aClan name &f: &r%clan%'
+         - '&aClan leader &f: %leader%'
+         - ' '
+         - '&6Clan respect &f: &e%respect%'
+         - '&6Points&f: &e%points%'
+         - '&6Balance&f: &e%balance%'
+         - ' '
+UPGRADE_MEMBERS:
+   row: 1
+   item: 'PLAYER_HEAD'
+   name: '&aMembers Upgrade'
+   lore:
+      - '&fUpgrade the size of your'
+      - '&fclan to %amount% members'
+      - ' '
+      - '&e&lStatus: &f%status%'
+      - ' '
+      - '&b&lCosts:'
+      - '&7- &eRespect &f: %respect%'
+      - '&7- &ePoints &f: %points%'
+      - '&7- &eBalance &f: %bal%'
+   upgrade:
+      '2':
+         amount: 3
+         respect: 20
+         points: 5
+         bal: 1000
+      '3':
+         amount: 4
+         respect: 50
+         points: 10
+         bal: 5000
+      '4':
+         amount: 5
+         respect: 100
+         points: 15
+         bal: 10000
+      '5':
+         amount: 6
+         respect: 150
+         points: 20
+         bal: 20000
+      '6':
+         amount: 8
+         respect: 200
+         points: 25
+         bal: 50000
+UPGRADE_HOME:
+   row: 2
+   item: 'OAK_SIGN'
+   name: '&1Base Upgrade'
+   lore:
+      - '&fUpgrade the Amount of the'
+      - '&fclan bases to %amount%.'
+      - ' '
+      - '&e&lStatus: &f%status%'
+      - ' '
+      - '&b&lCosts:'
+      - '&7- &eRespect &f: %respect%'
+      - '&7- &ePoints &f: %points%'
+      - '&7- &eBalance &f: %bal%'
+   upgrade:
+      '2':
+         amount: 2
+         respect: 25
+         points: 7
+         bal: 1000
+      '3':
+         amount: 4
+         respect: 70
+         points: 15
+         bal: 10000
+      '4':
+         amount: 6
+         respect: 150
+         points: 20
+         bal: 20000
+      '5':
+         amount: 8
+         respect: 250
+         points: 50
+         bal: 50000
+      '6':
+         amount: 10
+         respect: 500
+         points: 100
+         bal: 100000
+UPGRADE_VAULTS:
+   row: 3
+   item: 'CHEST'
+   name: '&eVault Upgrade'
+   lore:
+      - '&fUpgrade the Amount of the'
+      - '&fclan vaults to %amount%.'
+      - ' '
+      - '&e&lStatus: &f%status%'
+      - ' '
+      - '&b&lCosts:'
+      - '&7- &eRespect &f: %respect%'
+      - '&7- &ePoints &f: %points%'
+      - '&7- &eBalance &f: %bal%'
+   upgrade:
+      '2':
+         amount: 2
+         respect: 100
+         points: 20
+         bal: 10000
+      '3':
+         amount: 4
+         respect: 500
+         points: 50
+         bal: 100000
+      '4':
+         amount: 6
+         respect: 1000
+         points: 100
+         bal: 200000
+      '5':
+         amount: 8
+         respect: 2000
+         points: 150
+         bal: 500000
+      '6':
+         amount: 10
+         respect: 5000
+         points: 300
+         bal: 1000000
+UPGRADE_DUELS:
+   row: 4
+   item: 'WITHER_SKELETON_SKULL_ITEM'
+   name: '&4Duels Upgrade'
+   lore:
+      - '&fUpgrade the Amount of duels'
+      - '&fper day to %amount%.'
+      - ' '
+      - '&e&lStatus: &f%status%'
+      - ' '
+      - '&b&lCosts:'
+      - '&7- &eRespect &f: %respect%'
+      - '&7- &ePoints &f: %points%'
+      - '&7- &eBalance &f: %bal%'
+   upgrade:
+      '3':
+         amount: 3
+         respect: 5000
+         points: 200
+         bal: 1000000
+      '4':
+         amount: 4
+         respect: 10000
+         points: 500
+         bal: 2000000
+      '5':
+         amount: 5
+         respect: 20000
+         points: 1000
+         bal: 5000000
+
+UPGRADE_ALLIES:
+   row: 5
+   item: DIAMOND_SWORD
+   name: '&dAllies & Truce Upgrade'
+   lore:
+      - '&fUpgrade the Number of allies and'
+      - '&ftruces you can have by %amount%.'
+      - ' '
+      - '&e&lStatus: &f%status%'
+      - ' '
+      - '&b&lCosts:'
+      - '&7- &eRespect &f: %respect%'
+      - '&7- &ePoints &f: %points%'
+      - '&7- &eBalance &f: %bal%'
+   upgrade:
+      '3':
+         amount: 2
+         respect: 1000
+         points: 400
+         bal: 10000000
+      '4':
+         amount: 3
+         respect: 2000
+         points: 800
+         bal: 50000000
+      '5':
+         amount: 4
+         respect: 5000
+         points: 1500
+         bal: 100000000
+   

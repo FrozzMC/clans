@@ -1,0 +1,110 @@
+settings: 
+   # all time is in seconds
+   request-send-time: 10 #time until a sent request will expire
+   request-recieve-time: 30   #time until an accepted request will expire(until teams are completed) 
+   duel-prestart-time: 5   #time before duel will start
+   duel-time: 600   #time until duel will continue(is expires then team with most players wins)
+   duel-preend-time: 3 #time until all players are sent back & duel ends
+   min-team-size: 2
+   max-team-size: 8
+messages:
+   title-request: "&a&lDUEL REQUEST RECEIVED"
+   subtitle-request: "&7To accept the duel, type &b/clan accept&7."
+   on-request:
+      - '&f-------------------------------'
+      - '    &b&lClan &f&lDuels:'
+      - '&f%clan%&f has challenged'
+      - '&fyour clan to a duel.'
+      - ' '
+      - '&b&lDuel Settings:'
+      - '&7- &eArena : &7%arena%'
+      - '&7- &aTeam size : &7%teamsize%'
+      - '&7- &6Kit : &7%kit%'
+      - '&7- &cKeep inventory : &7%keepinv%'
+      - ' '
+      - '&f-------------------------------'
+      - '     &f&lClick Here to accept.<cc>/clan accept<cc>'
+      - '&f-------------------------------'
+   on-join:
+      - '&f-------------------------------'
+      - '&b&lClan &f&lDuel'
+      - '&eCurrent Team:'
+      - '&f- &f%team%'
+      - ' '
+      - '&f%player% has joined the team'
+      - '&f-------------------------------'
+   on-teaming-fail:
+      - '&f-------------------------------'
+      - '&b&lClan &f&lDuel'
+      - '&cFailed'
+      - '&fDuel teams were not complete'
+      - '&f-------------------------------'
+   on-prestart:
+      - '&f-------------------------------'
+      - '&b&lClan &f&lDuel'
+      - '&eStarting Duel'
+      - ' '
+      - '&eCurrent Team:'
+      - '&f- &f%team%'
+      - ' '
+      - '&aGood Luck!'
+      - '&f-------------------------------'
+   on-start:
+      - '&f-------------------------------'
+      - '&b&lClan &f&lDuel'
+      - '%clanalpha%&f vs %clanbravo%'
+      - ' '
+      - '%clanalpha%&f Fighters:'
+      - '&7- &f%clanalphateam%'
+      - '%clanbravo%&f Fighters:'
+      - '&7- &f%clanbravoteam%'
+      - ' '
+      - '&eWinning prize: &a2 respect'
+      - '&cLoosing penalty: &1 respect'
+      - '&fDuel duration: %dueltime%'
+      - ' '
+      - '&aGood Luck!'
+      - '&f-------------------------------'
+   broadcast-on-start:
+      - '&f-------------------------------'
+      - '&b&lClan &f&lDuel'
+      - '%clanalpha%&f vs %clanbravo%'
+      - ' '
+      - '%clanalpha%&f Fighters:'
+      - '&7- &f%clanalphateam%'
+      - '%clanbravo%&f Fighters:'
+      - '&7- &f%clanbravoteam%'
+      - ' '
+      - '&eWinning prize: &a+2 &frespect'
+      - '&cLoosing penalty: &c-1 &frespect'
+      - '&fDuel duration: %dueltime%'
+      - ' '
+      - '&aGood Luck!'
+      - '&f-------------------------------'
+   on-end:
+      - '&f-------------------------------'
+      - '&b&lDuel &f&lFinished'
+      - ' '
+      - '%clanalpha%&f vs %clanbravo%'
+      - ' '
+      - '&a&lWinner:'
+      - '&7- &f%winner%'
+      - ' '
+      - '&c&lLoser:'
+      - '&7- &f%loser%'
+      - ' '
+      - '&f-------------------------------'
+   boradcast-on-end:
+      - '&f-------------------------------'
+      - '&b&lDuel &f&lFinished'
+      - ' '
+      - '%clanalpha%&f vs %clanbravo%'
+      - ' '
+      - '&a&lWinner:'
+      - '&7- &f%winner%'
+      - ' '
+      - '&c&lLoser:'
+      - '&7- &f%loser%'
+      - ' '
+      - '&f-------------------------------'
+      

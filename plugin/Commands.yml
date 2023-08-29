@@ -1,0 +1,28 @@
+# list of subcommands for the /clans command
+# if they are set to true any player can access these commands
+# if set to false the player need the permission node "epicsetclans.%command%"
+# for example player needs "epicsetclans.accept" permission if accept: is set to false
+ally: true
+bank: true
+base: true
+chat: true
+comment: true
+delbase: true
+help: true
+invite: true
+kick: true
+leave: true
+makeleader: true
+manage: true
+point: true
+remove: true
+rename: true
+respect: true
+setbase: true
+shop: true
+stats: true
+tag: true
+top: true
+truce: true
+withdraw: true
+settag: true
