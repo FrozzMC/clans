@@ -1,21 +1,20 @@
 package net.velex.clans.api.event;
 
 import com.google.common.base.Preconditions;
-import net.velex.clans.api.enums.Cause;
-import net.velex.clans.api.model.internal.ClanDataInternalModel;
+import net.velex.clans.api.clan.ClanModel;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 public class ClanDeleteEvent extends ClanEvent {
   private final Player player;
-  private final Cause cause;
+  private final DeleteCause cause;
   
   public ClanDeleteEvent(
-    final @NotNull ClanDataInternalModel clanDataInternalModel,
+    final @NotNull ClanModel clanModel,
     final @NotNull Player player,
-    final @NotNull Cause cause
+    final @NotNull DeleteCause cause
   ) {
-    super(clanDataInternalModel);
+    super(clanModel);
     this.player = Preconditions.checkNotNull(player, "Player reference cannot be null.");
     this.cause = Preconditions.checkNotNull(cause, "Cause type reference cannot be null.");
   }
@@ -24,7 +23,22 @@ public class ClanDeleteEvent extends ClanEvent {
     return player;
   }
   
-  public @NotNull Cause cause() {
+  public @NotNull DeleteCause cause() {
     return cause;
+  }
+  
+  public enum DeleteCause {
+    /**
+     * Indicates that the clan was deleted by the plugin,
+     */
+    DELETE_BY_API,
+    /**
+     * Indicates that the clan was deleted by an administrator.
+     */
+    DELETE_BY_ADMIN,
+    /**
+     * Indicates that the clan was deleted by the leader.
+     */
+    DELETE_BY_LEADER
   }
 }
