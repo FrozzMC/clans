@@ -1,4 +1,4 @@
-package net.velex.clans.api.model.config;
+package net.velex.clans.api.config.model;
 
 import space.arim.dazzleconf.annote.*;
 import space.arim.dazzleconf.serialiser.URLValueSerialiser;

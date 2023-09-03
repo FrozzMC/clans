@@ -1,4 +1,4 @@
-package net.velex.clans.api.model.config;
+package net.velex.clans.api.config.model;
 
 import org.jetbrains.annotations.NotNull;
 import space.arim.dazzleconf.annote.*;
