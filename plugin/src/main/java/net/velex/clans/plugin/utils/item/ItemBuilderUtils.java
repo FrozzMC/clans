@@ -49,7 +49,7 @@ public class ItemBuilderUtils {
 		final var meta = item.getItemMeta();
 		assert meta != null;
 		// Modify current item properties such as, flags, name, etc.
-		meta.addItemFlags(ItemFlag.values());
+		meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
 		meta.setUnbreakable(true);
 		meta.setDisplayName(displayName);
 		meta.setLore(lore);
