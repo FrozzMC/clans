@@ -1,18 +1,20 @@
 package net.velex.clans.api;
 
+import net.velex.clans.api.clan.ClanChatManager;
+import net.velex.clans.api.clan.ClanManager;
+import net.velex.clans.api.config.ConfigManager;
+import net.velex.clans.api.hook.HookManager;
 import net.velex.clans.api.model.*;
 import org.jetbrains.annotations.NotNull;
 
 public interface Clans {
-  @NotNull ConfManagerModel confManagerModel();
+  @NotNull ConfigManager configManager();
   
-  @NotNull ClanManagerModel clanManagerModel();
+  @NotNull ClanManager clanManager();
   
-  @NotNull ClanTopManagerModel clanTopManagerModel();
+  @NotNull ClanChatManager clanChatManager();
   
-  @NotNull ClanChatHandlerModel clanChatHandlerModel();
-  
-  @NotNull HookManagerModel hookManagerModel();
+  @NotNull HookManager hookManager();
 
   @NotNull AntiFarmManagerModel antiFarmManagerModel();
 }
