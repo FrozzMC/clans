@@ -1,6 +1,5 @@
 package net.velex.clans.api.config;
 
-import net.velex.clans.api.enums.Result;
 import net.velex.clans.api.config.model.*;
 import org.jetbrains.annotations.NotNull;
 import space.arim.dazzleconf.ConfigurationOptions;
@@ -20,7 +19,6 @@ public class ConfigManager {
   private final ConfigurationHelper<CommandsConfModel> commandsConfModelHelper;
   private final ConfigurationHelper<DuelSettingsConfModel> duelSettingsConfModelHelper;
   private final ConfigurationHelper<FormulasConfModel> formulasConfModelHelper;
-  
   private ConfModel confModel;
   private AntiFarmConfModel antiFarmConfModel;
   private CommandsConfModel commandsConfModel;
@@ -64,8 +62,8 @@ public class ConfigManager {
   /**
    * Checks if all the configuration models were loaded correctly.
    *
-   * @return If the configuration were loaded correctly, will return a {@link Result#SUCCESS} enum type.
-   * <p>Else, will return a {@link Result#NO_CONFIG_LOAD} enum type.
+   * @return If the configuration were loaded correctly, will return a {@link ConfigManager.Result#SUCCESS} enum type.
+   * <p>Else, will return a {@link ConfigManager.Result#NO_CONFIG_LOAD} enum type.
    */
   public @NotNull Result load() {
     try {
@@ -129,5 +127,16 @@ public class ConfigManager {
    */
   public @NotNull DuelSettingsConfModel duelSettings() {
     return duelSettingsConfModel;
+  }
+
+  public enum Result {
+    /**
+     * Indicates that the operation were completed correctly.
+     */
+    SUCCESS,
+    /**
+     * Indicates that some (or all) configuration models could not be loaded correctly.
+     */
+    NO_CONFIG_LOAD
   }
 }
