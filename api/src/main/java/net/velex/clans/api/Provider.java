@@ -1,4 +1,4 @@
-package net.velex.clans;
+package net.velex.clans.api;
 
 import com.google.common.base.Preconditions;
 import org.jetbrains.annotations.NotNull;

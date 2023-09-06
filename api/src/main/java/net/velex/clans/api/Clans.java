@@ -1,4 +1,4 @@
-package net.velex.clans;
+package net.velex.clans.api;
 
 import net.velex.clans.antifarm.AntiFarmManager;
 import net.velex.clans.clan.ClanChatManager;
