@@ -1,6 +1,8 @@
 package net.velex.clans;
 
 import net.velex.clans.antifarm.AntiFarmManager;
+import net.velex.clans.api.Clans;
+import net.velex.clans.api.Provider;
 import net.velex.clans.clan.ClanChatManager;
 import net.velex.clans.clan.ClanManager;
 import net.velex.clans.config.ConfigManager;
