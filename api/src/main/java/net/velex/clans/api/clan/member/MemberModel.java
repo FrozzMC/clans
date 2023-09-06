@@ -9,22 +9,22 @@ public class MemberModel {
   private final String tag;
   private final String comment;
   
-  private int kills;
-  private int deaths;
+  private short kills;
+  private short deaths;
   private short points;
-  private int wins;
-  private int loses;
+  private short wins;
+  private short loses;
   
   public MemberModel(
     final @NotNull String id,
     final @NotNull String name,
     final @NotNull String tag,
     final @NotNull String comment,
-    final int kills,
-    final int deaths,
+    final short kills,
+    final short deaths,
     final short points,
-    final int wins,
-    final int loses
+    final short wins,
+    final short loses
   ) {
     this.id = Preconditions.checkNotNull(id, "User ID (UUID) cannot be null.");
     this.name = Preconditions.checkNotNull(name, "Member username cannot be null.");
@@ -45,11 +45,11 @@ public class MemberModel {
     return name;
   }
   
-  public int kills() {
+  public short kills() {
     return kills;
   }
   
-  public int deaths() {
+  public short deaths() {
     return deaths;
   }
   
@@ -57,11 +57,11 @@ public class MemberModel {
     return points;
   }
   
-  public int wins() {
+  public short wins() {
     return wins;
   }
   
-  public int loses() {
+  public short loses() {
     return loses;
   }
   
