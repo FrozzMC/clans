@@ -22,7 +22,7 @@ public class ClanChatManager {
     final var id = player.getUniqueId().toString();
     final var clanModel = clanManager.findById(id);
     // Checks if the player is in a clan.
-    if (!clanModel.isMember(id)) {
+    if ((clanModel == null) || !clanModel.isMember(id)) {
       return Result.NO_PLAYER_CLAN;
     }
     final var message = event.getMessage();
