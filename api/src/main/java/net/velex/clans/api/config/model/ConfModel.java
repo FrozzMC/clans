@@ -17,7 +17,7 @@ public interface ConfModel {
     "Prefix format for the plugin messages.",
     "Format can be used with the '<prefix>' placeholder."
   })
-  @ConfDefault.DefaultString("&a[clans] &8|")
+  @ConfDefault.DefaultString("&a[clans]")
   @NotNull String prefix();
   
   @AnnotationBasedSorter.Order(20)
@@ -92,7 +92,7 @@ public interface ConfModel {
   @ConfDefault.DefaultInteger(25)
   int clanInfoLengthLimit();
   
-  @AnnotationBasedSorter.Order(1000)
+  @AnnotationBasedSorter.Order(100)
   @ConfKey("config.clan.chat-symbol")
   @ConfComments({
     "Symbol used for the clan chat messages.",
@@ -101,7 +101,7 @@ public interface ConfModel {
   @ConfDefault.DefaultString("@")
   @NotNull String clanChatSymbol();
   
-  @AnnotationBasedSorter.Order(120)
+  @AnnotationBasedSorter.Order(110)
   @ConfKey("config.clan-chat-format")
   @ConfComments({
     "Format used for show the clan chat channel.",
@@ -109,31 +109,4 @@ public interface ConfModel {
   })
   @ConfDefault.DefaultString("&8[&6Clan-Channel&8] &e<tag> &f<player> &8&l| &f<message>")
   @NotNull String clanChatFormat();
-  
-  @AnnotationBasedSorter.Order(130)
-  @ConfKey("config.ally-chat-format")
-  @ConfComments("""
-    Format used for show the ally chat channel.
-    You can use placeholders and colors here.
-    """)
-  @ConfDefault.DefaultString("&8[&6Ally-Channel&8] <clan> &e<tag> &f<player> &8&l| &f<message>")
-  @NotNull String allyChatFormat();
-  
-  @AnnotationBasedSorter.Order(140)
-  @ConfKey("config.truce-chat-format")
-  @ConfComments({
-    "Format used for show the truce chat channel.",
-    "You can use placeholders and colors here."
-  })
-  @ConfDefault.DefaultString("&8[&6Truce-Channel&8] <clan> &e<tag> &f<player> &8&l| &f<message>")
-  @NotNull String truceChatFormat();
-  
-  @AnnotationBasedSorter.Order(150)
-  @ConfKey("config.spy-chat-format")
-  @ConfComments({
-    "Format used for show the spy chat channel.",
-    "You can use placeholders and colors here."
-  })
-  @ConfDefault.DefaultString("&8[&6Spy-Channel&8] <clan> &e<tag> &f<player> &8&l| &f<message>")
-  @NotNull String spyChatFormat();
 }
